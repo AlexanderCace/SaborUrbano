@@ -1,0 +1,212 @@
+body{
+    margin-top: 0PX;                 /*para que arriba ocupe todo el margen arriba*/
+    margin-left: 30PX;
+    margin-right: 30PX;
+    background-color: beige;
+    background-image: url(/images/fondo\ comida.jpg);   
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#FFEEA9;  
+    /*MUEVE ELEMENTOS EN EL EJE X*/
+} /*POSITION: RELATIVE, HEADER ES UN CONTENEDOR*/
+
+
+.logo {
+    border-radius: 30PX;
+    width: auto;
+    height: 200px;    
+}
+
+.link{
+    display:flex;
+    align-items:center;
+}
+
+h1{
+    font-family: "bungee spice", sans-serif;
+    font-style: italic;
+    font-size:large;
+    letter-spacing: 20px;
+}
+
+h2{
+    font-family: "BioRhyme Expanded", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -2px;
+    text-decoration: none;
+}
+
+.botones{
+    text-align:end
+    /* justify-self:center */
+}
+
+.boton{
+    background-color: #FFBF00;
+    border-radius: 10px;   /*FORMA REDONDA AL BOTON: ORDEN, MENU, PROMOS, NOSOTROS*/
+}
+
+.boton:hover{   /*EL COMANDO :HOVER VA TODO JUNTO, SIN SEPARAR*/
+    color: white;
+    background-color: black;
+    transform: scale(1.2); /*CAMBIA EL TAMAÑO DE BOTON AL PASARLE EL CURSOR*/
+    transform: translate(0px,3px); /*traslada a un lugar el boton | 0px en x | 3px en el eje y | no olvidaarse la , */
+    /* transform: rotate(20deg); gira 20 grados en un sentido */
+    transition: transform 300ms ease; /*TIEMPO DE ANIMACION DE UN BOTON, SI LE AGREGO ALL SE APLICARA PARA TODOS LOS ELEMENTOS*/
+    border-radius: 5px;  /*CAMBIA LA FORMA AL PASARLE EL CURSOR*/
+}
+
+.botones a:hover{
+    color: white;      /*cambia de color al pasarle el mouse*/
+}
+
+.ordene{
+    background-color:#FFBF00;
+    border-radius: 10px;
+}
+.padre1{
+    display: flex;
+    background-color: burlywood;
+    color: brown;
+}
+
+.padre2{
+    display: flex;
+    background-color: burlywood;
+    color: brown;
+} /*AL NAV POSITION: ABSOLUTE, HACE QUE PUEDA MODIFICAR LA POSICION QUE HAY DENTRO, POR AHORA LE PUSE SECTION, AL MAIN DEBERIA CAMBIARLO POR NAV*/
+.practicando{
+    color: yellow;
+}
+
+footer{
+    background-color: #E7D37F;
+    color: white;
+}
+
+.d-blockw-100{   /*NO SEPARAR LAS ETIQUETAS NUNCA*/
+    width: 100%;
+    height: 600px;
+}
+
+.arriba{
+    flex: 50%;
+    border: 2px solid black;
+    border-radius: 20PX;
+    margin: 25px;
+    margin-bottom: 0;                           /*margen: distancia entre tarjetas, se suman 25 + 25 = 50px*/
+    background-color: #FDFFE2;
+}
+
+/*ESTE DIV SE SEPARA PARA QUE VAYA ABAJO CON FLEX*/
+.abajo{
+    flex: 50%;
+    border: 2px solid black;
+    border-radius: 20PX;
+    margin-top: 0;
+    margin: 25px;
+    margin-bottom: 25px;                     /*arriba 0 abajo 25 pixeles*/
+    background-color: #FDFFE2;
+}
+
+.COMIDA{
+    height: 300px; /*alto*/
+    width: 100%; /*ancho*/
+    border-radius: 17px 17px 0 0; /*derecha arriba, izquierda arriba, derecha abajo, izquierda abajo*/
+}
+
+.app{
+    width: 500PX;
+    height: 300PX;
+}    
+
+.iconos2{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 16px;
+}
+.iconos{ /*etiqueta A contiene insta, what y youtube, ademas de los logos*/
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -250px;
+}
+
+.redes{
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    display: flex;   
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.redes:hover{
+    color: #FDFFE2;
+}
+footer{
+    text-decoration: none;
+}
+.fin:hover{
+    color: white;
+}
+
+.final{
+    text-align:center;
+    background-color: black;
+    margin: 0;
+}
+
+/*MEDIAS QUERIES*/
+@media(max-width: 768px){
+    /* MAIN{
+        flex-direction: column;
+    } */
+    /* .PADRE1 .COMIDA{
+        flex-direction: column;
+    }
+    .padre2 ABAJO{
+        flex-direction: column;
+    } */
+    /* DIV{
+        flex-direction: column;
+    }
+    .abajo{
+        flex-direction: column;
+    } */
+    body{
+        margin: 0;
+    }
+    h1{
+        display: none;
+    }
+    .padre1{
+        flex-direction: column;
+    }
+    .padre2{
+        flex-direction: column;
+    }
+    .app{
+        width: 250px;
+        height: auto;
+    }
+    
+    .iconos{
+        margin: 20px;
+        display: flex;
+        justify-content:end;
+    }
+    .redes{
+        display: none;
+    }
+    .botones{
+        position: relative;
+        text-align: end;
+        direction: rtl; /*cambio direccion de botones*/
+    }
+}
